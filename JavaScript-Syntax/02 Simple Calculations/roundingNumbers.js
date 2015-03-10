@@ -1,3 +1,6 @@
+//Write a JavaScript function roundNumber(value)
+//that rounds floating-point number using Math.round(), Math.floor().
+
 'use strict';
 
 function roundNumber(value) {

@@ -1,3 +1,5 @@
+//Write a JavaScript function convertKWtoHP(value) to convert car’s kW into hp (horse power).
+
 'use strict';
 
 function convertToHP(kw) {
