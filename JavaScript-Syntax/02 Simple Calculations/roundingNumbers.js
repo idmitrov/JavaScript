@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 function roundNumber(value) {
     console.log(value + " Rounded using Math.floor " + Math.floor(value));

@@ -3,7 +3,7 @@
 function convertToHP(kw) {
     var hp = 0.745699872;
     var result =  kw / hp;
-    
+
     //ROUND TO THE SECOND DIGIT AFTER THE DECIMAL POINT
     return Math.round(result * 100) / 100;
 }
