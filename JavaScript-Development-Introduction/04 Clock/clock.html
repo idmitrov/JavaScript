@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Clock</title>
+</head>
+<body onload='showTime()'>
+    <div id="clock"></div>
+    <script>
+        function showTime() {
+            var today = new Date;
+            var currentHour = today.getHours() < 10 ? '0' + today.getHours(): today.getHours();
+            var currentMinute = today.getMinutes() < 10 ? '0' + today.getMinutes(): today.getMinutes();
+            var currentSecond = today.getSeconds() < 10 ? '0' + today.getSeconds(): today.getSeconds();
+
+            document.getElementById('clock').innerHTML = currentHour + ":" + currentMinute + ":" + currentSecond;
+            var updateTime = setTimeout(function () {
+               showTime();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
