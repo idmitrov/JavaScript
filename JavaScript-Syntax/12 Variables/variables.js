@@ -11,9 +11,17 @@ function variablesTypes(value) {
     var favFoods = 'My favorite foods are: ';
 
     for (var index in value[3]) {
-        favFoods += index < value[3].length - 1 ? value[3][index] + ', ' : value[3][index] + ' //type is: ' + typeof value[3];
+        favFoods += index < value[3].length - 1 ? value[3][index] + ',' : value[3][index] + ' //type is: ' + typeof value[3];
     }
     return (name + '\r\n' + age + '\r\n' + gender + '\r\n' + favFoods);
 }
 
 console.log(variablesTypes(['Pesho', 22, true, ['fries', 'banana', 'cake']]));
+/*
+    OUTPUT:
+
+ "My name: Pesho //type is string
+ My age: 22 //type is number
+ I am male: true //type is boolean
+ My favorite foods are: fries,banana,cake //type is object"
+*/
