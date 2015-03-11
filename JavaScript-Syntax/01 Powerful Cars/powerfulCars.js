@@ -7,7 +7,7 @@ function convertToHP(kw) {
     var result =  kw / hp;
 
     //ROUND TO THE SECOND DIGIT AFTER THE DECIMAL POINT
-    return Math.round(result * 100) / 100;
+    return result.toFixed(2); // Math.round(result * 100) / 100 RETURN NUMBER TYPE
 }
 
 console.log(convertToHP(75)); //100.58

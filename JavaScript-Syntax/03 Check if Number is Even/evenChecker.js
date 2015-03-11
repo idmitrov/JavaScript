@@ -3,9 +3,9 @@
 'use strict';
 
 function isEvenNumber(number) {
-    console.log(number % 2 === 0);
+    return number % 2 === 0;
 }
 
-isEvenNumber(3);
-isEvenNumber(127);
-isEvenNumber(588);
+console.log(isEvenNumber(3)); //false
+console.log(isEvenNumber(127)); //false
+console.log(isEvenNumber(588)); //true

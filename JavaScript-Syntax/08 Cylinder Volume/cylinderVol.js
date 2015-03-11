@@ -8,9 +8,9 @@
 
 function calcCylinderVol(radius, height) {
     var volume = Math.PI * Math.pow(radius, 2) * height;
-    console.log(Math.round(volume * 1000) / 1000);
+    return volume.toFixed(3); //Math.round(volume * 1000) / 1000) RETURN NUMBER TYPE
 }
 
-calcCylinderVol(2, 4); //50.265
-calcCylinderVol(5, 8); //628.319
-calcCylinderVol(12, 3); //1357.168
+console.log(calcCylinderVol(2, 4)); //50.265
+console.log(calcCylinderVol(5, 8)); //628.319
+console.log(calcCylinderVol(12, 3)); //1357.168

@@ -14,8 +14,8 @@ function isPrime(value) {
             }
         }
     }
-    console.log(isPrimeNum);
+    return isPrimeNum;
 }
-isPrime(7); //true
-isPrime(254); //false
-isPrime(587); //true
+console.log(isPrime(7)); //true
+console.log(isPrime(254)); //false
+console.log(isPrime(587)); //true
