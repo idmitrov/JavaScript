@@ -11,6 +11,6 @@ function calcCylinderVol(radius, height) {
     console.log(Math.round(volume * 1000) / 1000);
 }
 
-calcCylinderVol(2, 4);
-calcCylinderVol(5, 8);
-calcCylinderVol(12, 3);
+calcCylinderVol(2, 4); //50.265
+calcCylinderVol(5, 8); //628.319
+calcCylinderVol(12, 3); //1357.168
