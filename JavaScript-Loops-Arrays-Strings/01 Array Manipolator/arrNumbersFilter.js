@@ -11,38 +11,40 @@
  Finally you should print out the numbers you have found and the filtered array sorted in descending order.
  */
 
-function filterNumbers(arr) {
-    for (var index in arr) {
-        //DELETE NON NUMBER OBJECTS
-        if (typeof(arr[index]) !== 'number') {
-            //delete arr[index];
-            delete arr[index];
-        }
-    }
-    //SORT AND FIND MIN MAX
-    function getMinMax(arr, command) {
+function filterNumbers(arrInput) {
+    //FILTER ARRAY FUNCTION
+    var filteredArray = arrInput.filter(function (arrIndex) {
+        return !isNaN(arrIndex);
+    });
+    //GET MIN MAX FUNCTION
+    function getMinMax(filtredArray, command) {
+        var returnValue = 0;
         switch (command) {
             case 'min':
-                arr.sort(function(a, b) {
-                    return a - b;
+                returnValue = filtredArray.sort(function (currentIndex, nextIndex) {
+                    return currentIndex > nextIndex;
                 });
                 break;
             case 'max':
-                arr.sort(function(a, b) {
-                    return b - a;
+                returnValue = filtredArray.sort(function (currentIndex, nextIndex) {
+                    return currentIndex < nextIndex;
                 });
                 break;
         }
-        return arr[0];
+        return returnValue[0];
     }
-    //FIND MOST FREQUENT NUMBER
-    function getMostFrequent(arr) {
+
+    //CALL GET MIN MAX FUNCTION
+    var minValue = getMinMax(filteredArray, 'min'),
+        maxValue = getMinMax(filteredArray, 'max');
+    //MOST FREQUENT FUNCTION
+    function getMostFrequent(filteredArray) {
         var count = 0,
             maxCount = 0,
             result = 0;
 
-        for (var i = 0; i < arr.length; i += 1) {
-            if (arr[i] === arr[i + 1]) {
+        for (var i = 0; i < filteredArray.length; i += 1) {
+            if (filteredArray[i] === filteredArray[i + 1]) {
                 count += 1;
             } else {
                 if (count > maxCount) {
@@ -52,19 +54,16 @@ function filterNumbers(arr) {
                 count = 0;
             }
         }
-        return arr[result];
+        return filteredArray[result];
     }
+    var mostFrequent = getMostFrequent(filteredArray);
 
-    var minValue = getMinMax(arr, 'min'),
-        maxValue = getMinMax(arr, 'max'),
-        mostFrequent = getMostFrequent(arr);
-
+    //LOG RESULTS
     console.log('Min number: ' + minValue);
     console.log('Max number: ' + maxValue);
     console.log('Most frequent number: ' + mostFrequent);
-
-    //TO FIX...
-    console.log(arr);
+    console.log(filteredArray);
 }
 
-filterNumbers(["Pesho", 2, "Gosho", 12, 2, "true", 9, undefined, 0, "Penka", {bunniesCount: 10}, [10, 20, 30, 40]]);
+filterNumbers(["Pesho", 2, "Gosho", 12, 2, "true", 9, undefined, 0, "Penka", {bunniesCount: 10}, [10, 20,
+    30, 40]]);
