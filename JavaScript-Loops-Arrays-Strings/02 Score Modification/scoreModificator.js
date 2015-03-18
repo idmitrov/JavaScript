@@ -25,4 +25,4 @@ function modifyScore(arrInput) {
     console.log(arrFiltered);
 }
 
-modifyScore([200, 120, 23, 67, 350, 420, 170, 212, 401, 615, -1]);
+modifyScore([200, 120, 23, 67, 350, 420, 170, 212, 401, 615, -1]); //[ 18.4, 53.6, 96, 136, 160, 169.6, 280 ]
