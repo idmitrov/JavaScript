@@ -1,5 +1,10 @@
 'use strict';
 
+/*
+ Write a JavaScript function findYoungestPerson(array) that accepts as parameter an array of people,
+ finds the youngest person that has a smartphone and returns his full name.
+*/
+
 function findYoungestPerson(array) {
     array = array.filter(function (person) {
         return person.hasSmartphone;
@@ -24,4 +29,4 @@ var people = [
     {firstname: 'Bay', lastname: 'Ivan', age: 81, hasSmartphone: true},
     {firstname: 'Baba', lastname: 'Ginka', age: 40, hasSmartphone: false}];
 
-findYoungestPerson(people);
+findYoungestPerson(people);//The youngest person is Vasil Kovachev
