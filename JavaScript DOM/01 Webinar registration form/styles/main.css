@@ -1,0 +1,68 @@
+html, body, header, h1, article, form, input,button, span, div {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font: 10px 'Arial', sans-serif;
+}
+
+    html body {
+        text-align: center;
+    }
+
+
+article {
+    margin: 0 auto;
+    width: 28rem;
+    border: solid 0.1rem #000;
+}
+
+form {
+    text-align: left;
+    font-size: 1.4rem;
+    background-color: rgba(255, 192, 203, 0.2);
+    display: inline-block;
+    padding: 1rem 4rem 1rem 4rem;
+}
+
+    form header h1 {
+        font-size: 1.4rem;
+    }
+
+    form label {
+        margin-top: 1rem;
+        cursor: pointer;
+    }
+        form label span.required {
+            color: #F00;
+        }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form input[type="datetime"]{
+        height: 2rem;
+    }
+
+    form input, form label {
+        display: block;
+    }
+
+#status {
+    background-color: #CCC;
+    height: 2rem;
+    padding-top: 0.6rem;
+    font-size: 1.4rem;
+    border-bottom: solid 0.1rem #000;
+}
+
+.invoice {
+    margin-top: 1rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#invoice-hidden {
+    visibility: hidden;
+}
